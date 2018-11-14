@@ -1,0 +1,25 @@
+
+.footer{
+    height:11rem;
+
+}
+.bir_wid{
+    width:11.2rem;
+}
+body{
+    background-image: url("../img/background2.png");
+    background-repeat: repeat-y;
+}
+.update_info{
+    height:25rem;
+    padding-top:3rem;
+    margin:1.1rem 0 1.3rem;
+
+}
+
+.bgc{
+    background:#fcf8e380;
+}
+form h4,form p{
+    color: #ff7590;
+}

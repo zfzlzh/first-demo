@@ -1,0 +1,37 @@
+footer{
+    padding-top:2rem;
+
+}
+.logo_footer{
+    color: #ff7a0e;
+    font-family:"MV Boli";
+    font-size:1.5rem;
+    margin-left:0.6rem;
+}
+
+footer div div div a{
+    font-size:1rem;
+}
+.modal-body h4{
+    color:#fff;
+}
+.copy{
+    font-family: "MV Boli";
+    font-size:1rem;
+    text-align:center;
+}
+.footer_img{
+    width:7rem;
+}
+.modal>.modal-dialog>.modal-content>.modal-header{
+    background: #fbff75;
+
+}
+.modal>.modal-dialog>.modal-body{
+    background: #ffb2cc;
+    border-color:transparent;
+}
+.modal-content {
+
+    border-color:transparent;
+}

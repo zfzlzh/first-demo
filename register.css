@@ -1,0 +1,30 @@
+body{
+    background-image: url("../img/background2.png");
+    background-repeat: repeat-y;
+}
+.reg{
+    width:27%;
+    margin:3rem auto;
+    background: #ff78fc30;
+}
+.back{
+    color:white;
+}
+.reg>div>input{
+    margin:0.1rem 1.5rem;
+    width:80%;
+    border-color: #00aeef;
+}
+.footer{
+    height:11rem;
+
+}
+.welcome{
+    color: #ff9b15;
+}
+.reg div span{
+    margin-left:2rem;
+    font-size:0.1rem;
+
+}
+

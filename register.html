@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+    <meta name="viewport" content="width=device-width,inital-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/all.css">
+
+</head>
+<body>
+<div class="container">
+    <iframe src="header.html" frameborder="0" scrolling="no" class="form-control-range"></iframe>
+        <div class="reg">
+            <h3 class="welcome text-center">欢迎注册</h3>
+            <div><input type="text" name="uname" id="uname" placeholder="请输入用户名" onblur="uname_blur()">
+                <span id="uname_info"></span>
+            </div>
+            <div><input type="password" name="upwd" id="upwd" placeholder="请输入密码" onfocus="upwd_focus()" onblur="upwd_blur()">
+                 <span id="upwd_info"></span>
+            </div>
+            <div><input type="password" name="reupwd" id="reupwd" placeholder="请再次输入密码" onfocus="reupwd_focus()" onblur="reupwd_blur()">
+                 <span id="reupwd_info"></span>
+            </div>
+            <div><input type="text" name="birth" id="birth" placeholder="请输入生日">
+                    <span></span></div>
+            <div><input type="email" name="email" id="email" placeholder="请输入您的邮箱" onblur="email_blur()">
+                <span id="email_info"></span>
+            </div>
+            <div><input type="text" name="phone" id="phone" placeholder="请输入您的电话号码" onblur="phone_blur()">
+                <span id="phone_info"></span>
+            </div>
+            <input type="radio" id="male" name="gender" value="1"><label for="male">男</label>
+            <input type="radio" id="female" name="gender" value="0"><label for="female">女</label>
+            <input type="radio" id="secrect" name="gender" value="2"><label for="secrect">不详</label>
+            <button class="btn btn-outline-info w-100" onclick="reg_msg()">提交</button>
+
+</div>
+    <iframe src="footer.html" frameborder="0" scrolling="no" class="form-control-range footer"></iframe>
+</div>
+
+<script src="command.js"></script>
+<script src="js/reg.js"></script>
+<script src="js/register.js"></script>
+</body>
+</html>

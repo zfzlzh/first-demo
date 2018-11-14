@@ -1,0 +1,42 @@
+body{
+    margin:0;
+    padding:0;
+    background-image: url("../img/background2.png");
+    background-repeat: repeat-y;
+}
+.back{
+    color:white;
+}
+
+.login_wd{
+    width:20rem;
+    line-height: 2.5rem;
+    margin:7rem auto 0;
+
+}
+.login_wd .info input{
+    width:100%;
+    margin-top:1rem;
+    border:3px dotted #b9eeb2;
+}
+.login_wd div button{
+    width:100%;
+        margin-top: 1rem;
+}
+.login_wd div a{
+    font-size:0.5rem;
+}
+.footer{
+    height:14rem;
+    margin-top:10rem;
+
+}
+div button{
+    text-shadow:2px 2px 20px rgba(66, 66, 66, 0.88);
+}
+div button:hover{
+    text-shadow:none;
+}
+.login_wd div h4,.login_wd div a,.login_wd div label{
+    color: #ffb2cc;
+}

@@ -1,0 +1,64 @@
+body{
+    background-color: transparent;
+}
+header div a img{
+    height:2rem;
+}
+.input_bg{
+    background:url("../img/013.png");
+    background-repeat: no-repeat;
+    margin-left:5rem;
+}
+.logo_text{
+    font-size:1.1rem;
+    color: #ff7a0e;
+    font-family:"MV Boli";
+
+}
+input{
+    height:2.25rem;
+    width:21.1rem;
+    margin-left:2rem;
+    margin-top:1.5rem;
+    border:none;
+    background:transparent;
+}
+
+.login{
+    margin-left:25rem;
+    margin-top:0.1rem;
+}
+
+.nav-line{
+    line-height: 2.1rem;
+    background: rgba(255, 49, 136, 0.2);
+    font-weight: bold;
+}
+.nav-line a:hover{
+    color: #ff85dc;
+}
+.input_search{
+    margin-top:-6.5rem;
+    margin-left:22.5rem;
+    cursor: pointer;
+}
+.candy_mac{
+    margin-left:-4rem;
+    margin-top:-0.5rem;
+}
+.input_search:active{
+    transform-origin: left bottom;
+    transform: rotate(60deg);
+}
+.badge {
+    font-size: 81%;
+    line-height: 2;
+}
+nav ul li{
+    border:1px solid rgba(255, 155, 21, 0.2);
+    width:12rem;
+    border-radius:20%;
+}
+nav ul li a{
+    color: #fffcda;
+}
