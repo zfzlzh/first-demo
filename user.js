@@ -137,7 +137,7 @@ router.post("/update_info",function(req,res){
     }
     pool.query("UPDATE user_info SET uname=?,upwd=?,birth=?,email=?,phone=?",[$uname,$upwd,$birth,$email,$phone],function(err,result){
         if(err) throw err;
-        res.send("<script>alert('修改成功');window.location.href='update.html';</script>");
+        res.send("<script>alert('修改成功');window.location.href='http://localhost:3000/';</script>");
     })
 
 

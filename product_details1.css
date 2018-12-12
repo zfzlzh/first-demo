@@ -1,0 +1,157 @@
+body{
+background:url("../img/background.jpg")
+}
+.footer{
+    height:12rem;
+}
+img.btn {
+    padding: 0;!important;
+}
+.wd_60{
+    width:60%;
+}
+.wd_60>div>div>p{
+    font-size:2rem;
+}
+.breadcrumb>li>a{
+    color: #ee8293;
+}
+.dropdown-menu>.card>div>ul>li,.dropdown>button{
+    color: #ff7590;
+    background-color: transparent;
+    background-image: none;
+    border-color: #ff7590;
+    margin:1rem 1.4rem;
+}
+.dropdown>.dropdown-menu>div{
+    font-size:1.5rem;
+    color: #ff9c7c;
+    line-height: 2rem;
+}
+
+.dropdown-menu>.card>div>ul>li:hover,.dropdown>button:hover {
+    color: #d6ffd7;
+    background-color: #ff7590;
+    border-color: #ff7590;
+}
+.dropdown-menu>.card>div>p{
+    color: #ff6f58;
+}
+.btn_buy{
+    margin-top: 5rem;
+}
+.btn_buy>a{
+    width:10rem;
+    height:3rem;
+text-align:center;
+  line-height: 2rem;
+    border:3px dashed #32ff99;
+    color: #a3a3a3;
+    font-weight: bold;
+}
+.btn_buy>a:hover{
+    background: #32ff99;
+    color:#fff;
+}
+.btn_buy>a:nth-child(3){
+    width:6rem;
+    height:3rem;
+}
+a[title]{
+    color: #ee8293;
+}
+.card-body>ul>li{
+    margin:1rem 0.5rem 0.5rem 1rem;
+
+}
+.card>img:first-child{
+    height:350px;
+    width:400px
+}
+.all_info>div{
+    margin-top: 1rem;
+}
+.lun_img>div>div>div>ul>li>img{
+    width:4rem;
+    height:4rem;
+    margin: 0rem 0.5rem 0 0.5rem;
+
+}
+.lun_img>div>div>div{
+    overflow: hidden;
+}
+
+.lun_img>div{
+    background:transparent;
+}
+.piano>div>ul>li{
+    font-size:0.9rem;
+    color: #ff6d3a;
+}
+.all_info>.btn{
+    font:1.2rem "华文琥珀";
+    color: #ff6d3a;
+    border:5px groove;
+
+}
+.all_info>.w-50{
+
+    border-image:linear-gradient(to right, #2fff8540 0%, rgba(255, 83, 18, 0.25) 100%) 2 2 2 2;
+
+}
+.all_info>.btn:hover{
+    background-image:linear-gradient(45deg, rgba(255, 127, 28, 0.25) 0%, rgba(28, 165, 255, 0.25) 100%);
+    color: #ff7f74
+}
+
+.all_info>.w-75{
+
+    border-image:linear-gradient(to right, #ff235f40 0%, #ffa85940 100%) 2 2 2 2;
+
+}
+
+.all_info>.w-100{
+
+    border-image:linear-gradient(to right, rgba(232, 176, 255, 0.25) 0%, rgba(89, 89, 255, 0.43) 100%) 2 2 2 2;
+
+}
+.good>div>ul>li>img{
+    width:10rem;
+    height:10rem;
+    margin:3rem 0 2rem 0;
+}
+.good>div>ul{
+    overflow: hidden;
+}
+.good>div>ul>li{
+    padding:1rem
+}
+.good>img{
+    margin-top:7rem
+}
+.good>div{
+    width:90%
+}
+.toTop{
+    position:fixed;
+    bottom:100px;
+    right:0;
+    display:none
+}
+.num_wid{
+    width:8%;
+    text-align: center;
+    line-height: 2.2rem;
+    border:1px dashed #32ff99
+}
+.jian{
+    padding:0.5rem 0.9rem;
+}
+.like{
+    margin-bottom:-3rem;
+    margin-top:7rem;
+    color:#ff6d3a;
+    font:2rem "华文琥珀";
+    
+}
+

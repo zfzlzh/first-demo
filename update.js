@@ -2,7 +2,7 @@ function find_info(){
 
     var urlPara=new URLSearchParams(location.search);
     var uid=urlPara.get("uid");
-
+    
     var xhr=createXhr();
 
     xhr.onreadystatechange=function(){

@@ -7,7 +7,10 @@ body{
 .select{
    line-height:2.46rem;
     margin-top:10rem;
-    transition: all 0.5s linear;
+
+}
+.select>ul>li>.nav-link:hover{
+    border-radius:0;
 }
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
@@ -32,57 +35,86 @@ body{
 .select>ul>li>.nav-link>span{
     transform-origin:center center;
     animation:font 20s linear infinite;
+    text-shadow: 0 1px 3px rgba(43, 52, 26, 1);
 }
 /*动画*/
 @keyframes change{
-    0%{
-
-        transform: rotate(0deg);
-    }
-
-    100%{
-
-        transform: rotate(360deg);
-    }
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
 }
 @keyframes font{
-    0%{
-
-        transform: rotate(0deg);
-    }
-
-    100%{
-
-        transform: rotate(-360deg);
-    }
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(-360deg);}
 }
 @keyframes roll{
-    0%{
-
-        transform: rotate(0deg);
-    }
-
-    100%{
-
-        transform: rotate(360deg);
-    }
+    0%{transform: rotate(0deg) rotateY(0deg);}
+    100%{transform: rotate(360deg) rotateY(180deg);}
 }
+@keyframes slider{
+    0%{transform: translateX(-500px) opacity:0;}
+    100%{transform:translateX(0px) opacity:1;}
+}
+
 /*轮播*/
-.carousel a{
-    background: rgba(239, 70, 189, 0.20);
-    width:7.1rem;
+.w_horse>.slider{
+    position:relative;
+    width:884px;
+    height:442px;
+    margin:0 auto
 }
-.carousel-indicators {
-    margin-left: 13%;
+
+.w_horse>.slider>img{
+    position:absolute; top:0; left:0;
+    opacity:0;
+    transition:all 1s linear;
+
 }
+.w_horse>.slider>img.show{
+    opacity: 1;
+    z-index:10;
+}
+.w_horse>ul>li{
+    width:1rem;
+    height:1rem;
+    border:3px double #7d6097;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.w_horse>ul{
+    z-index: 12;
+    top:36rem;
+    left:39rem;
+    width:15%;
+
+}
+.w_horse>ul>li.checked{
+    background: #f9ff41;
+}
+.w_horse>ul+a>img{
+    position:absolute;
+    top:23rem;
+    left:13rem;
+
+}
+.w_horse>ul+a+a>img{
+    position:absolute;
+    top:23rem;
+    left:75rem;
+
+}
+
+
 /*中间滚动*/
-.roll_radius{
+.center_roll>div{
     border:1px solid #000;
     border-radius:40%;
     width:2rem;
     height:2rem;
     transform-origin:center center;
     animation:roll 2s linear infinite;
+}
+.center_roll:hover>div{
+    animation:roll 0.1s linear infinite;
 }
 .border{
     border-radius: 19px;
@@ -92,26 +124,36 @@ body{
 }
 .blue{
     background: #bbefe7;
+
 }
 .pink{
     background: #efced1;
+
 }
 .yellow{
     background: #efec98;
 }
-.purper{
+.green{
     background: #a8ef94;
 }
-/*选项卡内容*/
+/*选项卡内容.tab-content>.tab-pane>//.content>div>div>a>div>p*/
+.tab-content .tab-pane{
+    transition:all 2s ease;
+    opacity: 0;
+}
     .content{
-        padding:1rem 3.1rem 1rem 3.1rem;
+        padding:1rem 3.1rem 1rem 0.1rem;
       }
+
 .tab-content .tab-pane .content a{
     margin-right:-5rem;
 }
     .tab-content .tab-pane .content div div{
         position: relative;
+
     }
+
+
     .tab-content .tab-pane .content div div a div p{
         font:1.5rem "华文行楷";
         color: #eeb7cf;
@@ -120,6 +162,7 @@ body{
         z-index:3;
         position: relative;
         border-radius: 5%;
+
 
     }
     .tab-content .tab-pane .content div .w-60 a div,
@@ -143,6 +186,9 @@ body{
         z-index:2;
         border-radius: 10%;
         padding-top:1rem;
+        position: absolute;
+        top:-150px;
+        left:0;
 
     }
     .tab-content .tab-pane .content div div a img:hover{
@@ -155,7 +201,7 @@ body{
     }
     .tab-content .tab-pane .content div .w-60 a div,.tab-content .tab-pane .content div .w-40 a div{
     top:7.8rem;
-
+        height:174px;
     }
     .tab-content .tab-pane .content .small_img div a div{
         top:3.3rem;
@@ -173,9 +219,9 @@ body{
 
     width:252px;
 }
-
-
-
+.tab-content .tab-pane.show{
+    opacity:1
+}
 /*footer*/
 body .footer{
     height:13rem;

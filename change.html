@@ -1,0 +1,226 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,inital-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <style>
+        .w_horse>.photo>.slider{
+            position:relative;
+            width:884px;
+            height:442px;
+            margin:0 auto
+        }
+
+        .w_horse>.photo>.slider>img{
+            position:absolute; top:0; left:0;
+           visibility: hidden;
+            transition:all 3s linear;
+
+        }
+        .w_horse>.photo>.slider>img.show{
+            opacity: 1;
+            z-index:10;
+        }
+        .w_horse>ul>li{
+            width:1rem;
+            height:1rem;
+            border:3px double #7d6097;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .w_horse>ul{
+            z-index: 12;
+            top:36rem;
+            left:39rem;
+            width:15%;
+
+        }
+        .w_horse>ul>li.checked{
+            background: #f9ff41;
+        }
+        .w_horse .puzzle{
+            margin:0 auto;
+            position:absolute;
+            top:1rem;
+            left:6rem;
+            z-index: 30;
+            height:442px;
+        }
+
+        .w_horse>ul+a>img{
+            position:absolute;
+            top:23rem;
+            left:13rem;
+            z-index:11;
+        }
+        .w_horse>ul+a+a>img{
+            position:absolute;
+            top:23rem;
+            left:75rem;
+            z-index: 11;
+        }
+        .w_horse .puzzle p{
+            position: absolute;
+            width: 458px;
+            height: 233px;
+        }
+        .w_horse .puzzle.fei p{
+
+        }
+        .w_horse .puzzle.wu{
+            z-index: -1;
+        }
+        .w_horse .puzzle.fei p:nth-child(1){-webkit-transform:rotateX(360deg) rotateY(10deg) translateZ(100px);}
+        .w_horse .puzzle.fei p:nth-child(2){-webkit-transform:rotateX(360deg) rotateY(10deg) translateZ(100px);}
+        .w_horse .puzzle.fei p:nth-child(3){-webkit-transform:rotateX(3450deg) rotateY(10deg) translateZ(100px);}
+        .w_horse .puzzle.fei p:nth-child(4){-webkit-transform:rotateX(-30deg) rotateY(-10deg) translateZ(100px);}
+        .w_horse .puzzle.fei p:nth-child(5){-webkit-transform:rotateX(330deg) rotateY(10deg) translateZ(100px);}
+        .w_horse .puzzle.fei p:nth-child(6){-webkit-transform:rotateX(40deg) rotateY(20deg) translateZ(100px);}
+        .w_horse .puzzle.fei p:nth-child(7){-webkit-transform:rotateX(340deg) rotateY(10deg) translateZ(100px);}
+        .w_horse .puzzle.fei p:nth-child(8){-webkit-transform:rotateX(3450deg) rotateY(60deg) translateZ(100px);}
+        .w_horse .puzzle.fei p:nth-child(9){-webkit-transform:rotateX(230deg) rotateY(10deg) translateZ(100px);}
+        .w_horse .puzzle.fei p:nth-child(10){-webkit-transform:rotateX(20deg) rotateY(20deg) translateZ(100px);}
+        .w_horse .puzzle.fei p:nth-child(11){-webkit-transform:rotateX(30deg) rotateY(10deg) translateZ(100px);}
+        .w_horse .puzzle.fei p:nth-child(12){-webkit-transform:rotateX(10deg) rotateY(10deg) translateZ(100px);}
+    </style>
+</head>
+<body>
+
+<div class="w_horse mt-3">
+    <div class="photo">
+        <div class="puzzle">
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+        <div class="slider">
+            <img src="img/lunbo/0.jpg" alt="aa" class="show"/>
+            <img src="img/lunbo/1.jpg" alt="aa"/>
+            <img src="img/lunbo/2.jpg" alt="aa"/>
+            <img src="img/lunbo/3.jpg" alt="aa"/>
+        </div>
+    </div>
+    <!--//小点-->
+    <ul class="position-absolute list-unstyled flex-row d-flex justify-content-between">
+        <li class="checked"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <!--左右图标-->
+    <a href="javascript:;" class="d-block"><img src="img/small/hover-prev.png"/></a>
+    <a href="javascript:;" class="d-block"><img src="img/small/hover-next.png"/></a>
+</div>
+        <script>
+            $(document).ready(
+                    function() {
+                        $(".puzzle p").each(
+                                function(){
+                                    var a = $(this).index() % 4 * 140;
+                                    var b = parseInt($(this).index() / 4) * 100;
+                                    $(this).css(
+                                            {
+                                                "left":a,
+                                                "top": b,
+                                                "background-position":(-a) + "px " + (-b) + "px"
+                                            }
+                                    );
+
+//轮播图//小圆点
+                        var img=$(".slider>img");
+                        var i=0;
+                        var ring=$(".w_horse>ul>li");
+                        function task(){
+                            i++;
+                            if(i==img.length)
+                                i=0;
+                            img.eq(i).addClass("show").siblings().removeClass("show");
+                            ring.eq(i).addClass("checked").siblings().removeClass("checked");
+                            dong();
+                        }
+//定时器
+                        var timer=setInterval(task,4000);
+                        $(".slider").hover(
+                                function(){
+                                    clearInterval(timer);
+                                },
+                                function(){
+                                    timer=setInterval(task,4000);
+                                });
+//小圆点点击事件
+                        ring.hover(function(){
+                                    clearInterval(timer);
+                                    var index=$(this).index();
+                                    i=index;
+                                    ring.eq(index).addClass("checked").siblings().removeClass("checked");
+                                    img.eq(index).addClass("show").siblings().removeClass("show");
+                                    dong()
+                                },
+                                function(){
+                                    timer=setInterval(task,4000);
+                                });
+//左右标签
+                        $(".w_horse>ul~a>img").hover(
+                                function(){
+                                    clearInterval(timer);
+                                },
+                                function(){
+                                    setInterval(task,4000);
+                                }
+                        )
+                        $(".w_horse>ul+a>img").click(
+                                function(){
+
+                                        i--;
+                                        img.eq(i).addClass("show").siblings().removeClass("show");
+                                        ring.eq(i).addClass("checked").siblings().removeClass("checked");
+                                  if(i==-1)
+                                        i=img.length-1;
+                                            dong()
+                                }
+
+                        );
+
+                        $(".w_horse>ul+a+a>img") .click(
+                                task(),
+                                    dong()
+
+                        );
+
+
+                     function dong(){
+
+                     //加过渡：
+                     $(".puzzle p").css("transition","all 1s ease 0s");
+                       $(".puzzle").removeClass("wu").addClass("fei");
+                         $(".slider img").attr("src","img/lunbo/" + i + ".jpg");
+                      setTimeout(function(){
+                      //去掉过渡
+                       $(".puzzle p").css("transition","none");
+                        $(".puzzle p").css("background-image","url(img/lunbo/" +i+ ".jpg)");
+
+                                            //我们准备下一张图
+                       $(".puzzle").removeClass("fei").addClass("wu");
+                       },1000);
+                      }
+                     }
+                        )})
+        </script>
+</body>
+</html>

@@ -33,10 +33,20 @@ body{
 }
 div button{
     text-shadow:2px 2px 20px rgba(66, 66, 66, 0.88);
+    animation:loginPlus 5s linear infinite;
 }
 div button:hover{
     text-shadow:none;
 }
-.login_wd div h4,.login_wd div a,.login_wd div label{
-    color: #ffb2cc;
+.login_wd div h4,.login_wd div label{
+    color: #ff7d79;
+}
+.login_wd div a{
+    color: rgba(50, 56, 62, 0.59);
+}
+/*¶¯»­*/
+@keyframes loginPlus {
+    from { background-color: transparent; box-shadow: 0 0 10px #333; }
+    50% { background-color: transparent; box-shadow: 0 0 25px rgba(195, 255, 9, 0.03); }
+    to { background-color:  transparent; box-shadow: 0 0 10px #333; }
 }
